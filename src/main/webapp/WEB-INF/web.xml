@@ -6,6 +6,21 @@
 
 	<display-name>ssh2</display-name>
 	
+	<!-- 
+    	为ContextLoaderListener 指定要加载的spring的配置文件
+    	ContextLoaderListener 加载配置文件的时候，在内部实际上是靠org.springframework.web.context.ContextLoader类来完成加载的
+  		所以只需要指定配置文件路径即可
+     -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:applicationContext.xml</param-value>
+	</context-param>
+	
+	<!-- 启动spring容器，启动后，spring容器被放入到application范围中 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
 	<!-- struts2过滤器 -->
 	<filter>
 		<filter-name>struts2</filter-name>

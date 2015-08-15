@@ -1,7 +1,10 @@
 package com.lxp.ssh2.web.action.test;
 
+import javax.annotation.Resource;
+
 import org.apache.struts2.convention.annotation.Action;
 
+import com.lxp.ssh2.service.HelloService;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -16,9 +19,12 @@ public class TestAction extends ActionSupport {
 	/**
 	 * 请求url:http://localhost:8080/test/testcon
 	 */
-
+	@Resource(name="helloService")
+	private HelloService helloService;
+	
 	@Action(value="testcon")
 	public String t1() {
+		helloService.sayHello();
 		return SUCCESS;
 	}
 }
