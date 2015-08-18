@@ -15,8 +15,8 @@
 			<li><a href="login">[登录]</a> <span class="divider">|</span></li>
 		</c:if>
 		<c:if test="${sessionScope.current_user!=null}">
-			<li>您好,${sessionScope.current_user.nikeName}<a href="#"> </a><a
-				href="auth.do?m=authLogout">[退出]</a> <span class="divider">|</span></li>
+			<li>您好,${sessionScope.current_user.account}<a href="#"> </a><a
+				href="logoff">[退出]</a> <span class="divider">|</span></li>
 		</c:if>
 		<li><a href="#">我的订单</a> <span class="divider">|</span></li>
 		<li><a href="cart.do?m=showCart"><i
@@ -32,15 +32,6 @@
 				<li class="divider"></li>
 				<li><a tabindex="-1" href="#">投诉中心</a></li>
 				<li><a tabindex="-1" href="#">客服邮箱</a></li>
-			</ul></li>
-		<li class="dropdown"><a class="dropdown-toggle"
-			data-toggle="dropdown">网站导航</a><b class="caret"></b>
-			<ul class="dropdown-menu">
-				<li><a tabindex="-1" href="#">导航1</a></li>
-				<li><a tabindex="-1" href="#">导航2</a></li>
-				<li><a tabindex="-1" href="#">导航3</a></li>
-				<li class="divider"></li>
-				<li><a tabindex="-1" href="#">导航4</a></li>
 			</ul></li>
 	</ul>
 </div>

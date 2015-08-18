@@ -25,7 +25,7 @@ body {
 	float:left;
 } 
 .header_search .search {
-	width:200px;
+	width:170px;
 	height:24px;
 	border:1px solid #ccc;
 	background:#fff;
@@ -104,4 +104,20 @@ body {
 .total_price .rmb{
 	font-size:40px;
 	color:#F84858;
+}
+/*****************jquery验证登录*******************/
+.state1 {
+	color: #468847;
+}
+
+.state2 {
+	color: #000;
+}
+
+.state3 {
+	color: red;
+}
+
+.state4 {
+	color: green;
 }

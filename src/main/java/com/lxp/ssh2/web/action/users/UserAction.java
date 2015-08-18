@@ -8,6 +8,7 @@ import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.ParentPackage;
 import org.apache.struts2.convention.annotation.Result;
+import org.apache.struts2.dispatcher.SessionMap;
 import org.springframework.stereotype.Controller;
 
 import com.lxp.ssh2.po.User;
@@ -115,7 +116,7 @@ public class UserAction extends ActionSupport {
 	 */
 	@SuppressWarnings("unchecked")
 	@Action(value="dologin", results={
-			@Result(name=SUCCESS, type="redirect", location="home/index"),
+			@Result(name=SUCCESS, type="redirect", location="/index"),
 			@Result(name=ERROR, location="home/login.jsp")
 	})
 	public String dologin() {
@@ -146,6 +147,20 @@ public class UserAction extends ActionSupport {
 			request.put("isEmpty", "用户名或密码错误");
 			return ERROR;
 		}
+		ActionContext.getContext().getSession().put("current_user", user);
+		return SUCCESS;
+	}
+	
+	/**
+	 * 退出操作
+	 */
+	@Action(value="logoff", results={
+			@Result(name=SUCCESS, type="redirect", location="/index")
+	})
+	public String logoff() {
+		SessionMap<String, Object> session = (SessionMap<String, Object>) ActionContext
+				.getContext().getSession();
+		session.invalidate();
 		return SUCCESS;
 	}
 }

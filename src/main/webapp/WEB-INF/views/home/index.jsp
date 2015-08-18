@@ -9,25 +9,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>网上书城</title>
-<link href="<%=path %>/assets/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
-<link href="<%=path %>/assets/app/application.css" rel="stylesheet" type="text/css">
-
-<!--[if lt IE 9]>
-<script src="<%=path %>/assets/js/html5shiv.js"></script>
-<![endif]-->
+<c:import url="../common.jsp"></c:import>
 </head>
 <body>
-<%@include file="_head.jsp" %>
+<c:import url="_head.jsp"></c:import>
 <div class="container">
   <div class="row">
-    <%@include file="_catalog.jsp" %>
-    <%@include file="_books.jsp" %>  
+  	<c:import url="_catalog.jsp"></c:import>
+  	<c:import url="_books.jsp"></c:import>
   </div>
 </div>
-<%@include file="_footer.jsp" %>
-<script language="javascript" src="<%=path %>/assets/js/jquery-1.11.3.js"></script> 
-<script language="javascript" src="<%=path %>/assets/bootstrap/js/bootstrap.js"></script>
-<script language="javascript" src="<%=path %>/assets/js/jquery-ui.js"></script>
-<script language="javascript" src="<%=path %>/assets/js/application.js"></script>
+<c:import url="_footer.jsp"></c:import>
 </body>
 </html>

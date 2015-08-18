@@ -66,10 +66,9 @@ public class UserServiceImpl implements UserService {
 	public User validateUser(User user) {
 		User tempuser = userDao.findByAccount(user.getAccount());
 		if(tempuser!=null) {
-			System.out.println(">>>>>>>>>>>>>>.");
 			String password = Crypt.crypt(user.getPassword(), tempuser.getSalt());
 			if(password.equals(tempuser.getPassword())) {
-				return user;
+				return tempuser;
 			}
 		}
 		return null;

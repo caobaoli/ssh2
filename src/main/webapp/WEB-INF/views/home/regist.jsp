@@ -47,14 +47,14 @@
 						<div class="controls">
 							<input name="kaptcha" class="span1" type="text" id="kaptcha">
 							<img src="kaptcha.jpg" id="kaptchaImage" /> <span
-								class="help-inline">${empty kaptcha?'':kaptcha}</span>
+								class="help-inline" id="help-inline">${empty kaptcha?'':kaptcha}</span>
 						</div>
 					</div>
 
 					<div class="form-actions">
-						<button type="submit" class="btn btn-primary">立即注册</button>
-						<a href="login" class="btn">去登录
-							</button> <a href="#">回到首页</a> <a href="#">忘记密码</a>
+						<button type="submit" class="btn btn-primary" id="registbtn">立即注册</button>
+						<a href="login" class="btn">去登录</a>
+							<a href="#">回到首页</a> <a href="#">忘记密码</a>
 					</div>
 					
 					
