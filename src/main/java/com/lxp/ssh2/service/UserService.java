@@ -12,5 +12,7 @@ import com.lxp.ssh2.po.User;
  * Copyright  Corporation 2015
  */
 public interface UserService {
+	public void save(User user);
+	public User validateUser(User user);
 	public List<User> findAll();
 }

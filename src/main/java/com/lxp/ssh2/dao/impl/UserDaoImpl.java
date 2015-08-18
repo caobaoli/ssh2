@@ -19,18 +19,26 @@ import com.lxp.ssh2.po.User;
 public class UserDaoImpl extends BaseDao implements UserDao {
 
 	@Override
-	public void add() {
-		User user = new User();
-		user.setAccount("123");
-		user.setName("123");
-		user.setPassword("123");
+	public void add(User user) {
 		this.getHibernateTemplate().save(user);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<User> findAll() {
 		String hql = "from User";
 		return super.getHibernateTemplate().find(hql);
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public User findByAccount(String account) {
+		String hql = "from User u where u.account = ?";
+		List<User> list = super.getHibernateTemplate().find(hql, account);
+		if(!list.isEmpty()) {
+			return (User)list.get(0);
+		}
+		return null;
 	}
 
 }

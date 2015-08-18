@@ -172,6 +172,19 @@
 			<version>1.2.17</version>
 		</dependency>
 
+		<!-- 图片验证码 -->
+		<dependency>
+			<groupId>com.github.penggle</groupId>
+			<artifactId>kaptcha</artifactId>
+			<version>2.3.2</version>
+		</dependency>
+		
+		<!--MD5 -->
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.9</version>
+		</dependency>
 
 	</dependencies>
 
@@ -195,8 +208,10 @@
 				<version>8.1.8.v20121106</version>
 				<configuration>
 					<webAppConfig>
+						<contextPath>ssh2</contextPath>
 						<contextPath>/</contextPath>
 					</webAppConfig>
+					<scanIntervalSeconds>3</scanIntervalSeconds>
 				</configuration>
 			</plugin>
 		</plugins>

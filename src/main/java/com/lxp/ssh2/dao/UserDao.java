@@ -12,6 +12,7 @@ import com.lxp.ssh2.po.User;
  * Copyright  Corporation 2015
  */
 public interface UserDao {
-	public void add();
+	public void add(User user);
+	public User findByAccount(String account);
 	public List<User> findAll();
 }
