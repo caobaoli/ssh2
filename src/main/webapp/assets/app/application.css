@@ -70,8 +70,9 @@ body {
 .well {
 	background-color:#FFFBEA;
 	border: 1px solid #FFFBEA;
-	padding:0px;
 	color:#974C19;
+	margin-top: 30px;
+    padding: 10px;
 }
 .nav .nav-header {
 	font-size:14px;
@@ -120,4 +121,22 @@ body {
 
 .state4 {
 	color: green;
+}
+/*************************分页样式*********************************/
+.pagination{
+	margin:0px;
+	float:right;
+}
+.summary{
+	line-height: 40px;
+	margin-right: 10px;
+	display: block;
+	float: right;
+}
+
+li.active > a:hover {
+    background-color: blue;
+    border-color: #0080ff;
+    color: #8080ff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }

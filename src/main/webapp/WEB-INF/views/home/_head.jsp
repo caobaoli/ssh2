@@ -41,7 +41,7 @@
 		<div class="navbar-inner nav_bg">
 			<a class="brand" href="#">全部商品分类</a>
 			<ul class="nav">
-				<li><a href="home.do">首页</a></li>
+				<li><a href="index.action">首页</a></li>
 				<li><a href="#">图书城</a></li>
 				<li><a href="#">阅览区</a></li>
 				<li><a href="#">团购</a></li>

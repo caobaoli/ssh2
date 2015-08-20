@@ -47,6 +47,8 @@
 		<property name="annotatedClasses">
 			<list>
 				<value>com.lxp.ssh2.po.User</value>
+				<value>com.lxp.ssh2.po.Catalog</value>
+				<value>com.lxp.ssh2.po.Book</value>
 			</list>
 		</property>
 	</bean>

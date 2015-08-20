@@ -3,6 +3,7 @@ package com.lxp.ssh2.dao.impl;
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.lxp.ssh2.dao.BaseDao;
 import com.lxp.ssh2.dao.UserDao;
@@ -18,6 +19,7 @@ import com.lxp.ssh2.po.User;
 @Repository(value="userDao")
 public class UserDaoImpl extends BaseDao implements UserDao {
 
+	@Transactional
 	@Override
 	public void add(User user) {
 		this.getHibernateTemplate().save(user);
@@ -31,6 +33,7 @@ public class UserDaoImpl extends BaseDao implements UserDao {
 	}
 
 	@SuppressWarnings("unchecked")
+	@Transactional
 	@Override
 	public User findByAccount(String account) {
 		String hql = "from User u where u.account = ?";
